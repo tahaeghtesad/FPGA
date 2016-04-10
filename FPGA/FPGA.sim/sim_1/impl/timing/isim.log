@@ -1,0 +1,11 @@
+ISim log file
+Running: C:/Users/tahae/Desktop/FPGA/FPGA/FPGA.sim/sim_1/impl/timing/TopModule.exe -intstyle pa -gui -tclbatch isim.cmd -wdb TopModule.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+INFO: SDF backannotation was successful with SDF file c:/users/tahae/desktop/fpga/fpga/fpga.sim/sim_1/impl/timing/topmodule_time_impl.sdf, for root module /TopModule/.
+Finished circuit initialization process.

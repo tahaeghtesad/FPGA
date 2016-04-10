@@ -1,0 +1,1 @@
+-intstyle "pa" -incremental --nodebug -L "work" -L "simprims_ver" -L "secureip" -o "TopModule.exe" --prj "C:/Users/tahae/Desktop/FPGA/FPGA/FPGA.sim/sim_1/impl/timing/TopModule.prj" -top "work.TopModule" -top "work.glbl" 

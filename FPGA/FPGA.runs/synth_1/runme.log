@@ -1,0 +1,444 @@
+
+*** Running xst
+    with args -ifn "TopModule.xst" -ofn "TopModule.srp" -intstyle ise
+
+Reading design: TopModule.prj
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "c:/Users/tahae/Desktop/FPGA/ipcore_dir/ClockGenerator.v" into library work
+Parsing module <ClockGenerator>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/DIP_TO_LED.v" into library work
+Parsing module <DIP_TO_LED>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/OneOneOhOneDetector.v" into library work
+Parsing module <OneOneOhOneDetector>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/toBCD.v" into library work
+Parsing module <ToBCD>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/BCDto7Seg.v" into library work
+Parsing module <BCDto7Seg>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/ToSeg.v" into library work
+Parsing module <ToSeg>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/SIPO.v" into library work
+Parsing module <SIPO>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/PISO.v" into library work
+Parsing module <PISO>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/SevenSeg_Driver.v" into library work
+Parsing module <SevenSeg_Driver>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/LED_Driver.v" into library work
+Parsing module <LED_Driver>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/Key_Driver.v" into library work
+Parsing module <Key_Driver>.
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/TopModule.v" into library work
+Parsing module <TopModule>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TopModule>.
+
+Elaborating module <ClockGenerator>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=8,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=80,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=20,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DIVIDE=8,CLKOUT2_PHASE=0.0,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DIVIDE=4,CLKOUT3_PHASE=0.0,CLKOUT3_DUTY_CYCLE=0.5,CLKIN_PERIOD=20.0,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "c:/Users/tahae/Desktop/FPGA/ipcore_dir/ClockGenerator.v" Line 129: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "c:/Users/tahae/Desktop/FPGA/ipcore_dir/ClockGenerator.v" Line 130: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "c:/Users/tahae/Desktop/FPGA/ipcore_dir/ClockGenerator.v" Line 131: Assignment to locked_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" Line 115: Assignment to clk20 ignored, since the identifier is never used
+
+Elaborating module <Key_Driver>.
+
+Elaborating module <SIPO>.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/SIPO.v" Line 31: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/SIPO.v" Line 62: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:1127 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" Line 129: Assignment to push_data ignored, since the identifier is never used
+
+Elaborating module <LED_Driver>.
+
+Elaborating module <PISO>.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/PISO.v" Line 31: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/PISO.v" Line 55: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <SevenSeg_Driver>.
+
+Elaborating module <ToSeg>.
+
+Elaborating module <ToBCD>.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/toBCD.v" Line 50: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/toBCD.v" Line 48: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/toBCD.v" Line 46: Result of 5-bit expression is truncated to fit in 4-bit target.
+
+Elaborating module <BCDto7Seg>.
+WARNING:HDLCompiler:413 - "C:/Users/tahae/Desktop/FPGA/SevenSeg_Driver.v" Line 37: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:189 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" Line 131: Size mismatch in connection of port <binary>. Formal port size is 13-bit while actual signal size is 16-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TopModule>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/TopModule.v".
+WARNING:Xst:647 - Input <i_Eth_INT> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SW4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_RXD1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_RXD2> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_MMC_DO> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <i_SYS_RESET> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" line 115: Output port <CLK_OUT2> of the instance <clkgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" line 115: Output port <CLK_OUT3> of the instance <clkgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" line 115: Output port <CLK_OUT4> of the instance <clkgen> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" line 129: Output port <push> of the instance <key_driver> is unconnected or connected to loadless signal.
+Always blocking tristate driving signal <io_USB_IFCLK> is removed.
+Always blocking tristate driving signal <io_Data<7>> is removed.
+Always blocking tristate driving signal <io_Data<6>> is removed.
+Always blocking tristate driving signal <io_Data<5>> is removed.
+Always blocking tristate driving signal <io_Data<4>> is removed.
+Always blocking tristate driving signal <io_Data<3>> is removed.
+Always blocking tristate driving signal <io_Data<2>> is removed.
+Always blocking tristate driving signal <io_Data<1>> is removed.
+Always blocking tristate driving signal <io_Data<0>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<9>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<8>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<7>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<6>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<5>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<4>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<3>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<2>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<1>> is removed.
+Always blocking tristate driving signal <io_MuxEthUSB<0>> is removed.
+    Found 1-bit tristate buffer for signal <o_MMC_SCK> created at line 80
+    Found 1-bit tristate buffer for signal <o_MMC_DI> created at line 82
+    Found 1-bit tristate buffer for signal <o_MMC_CS> created at line 83
+    Found 1-bit tristate buffer for signal <o_VGA_blue0> created at line 85
+    Found 1-bit tristate buffer for signal <o_VGA_blue1> created at line 86
+    Found 1-bit tristate buffer for signal <o_VGA_green0> created at line 87
+    Found 1-bit tristate buffer for signal <o_VGA_green1> created at line 88
+    Found 1-bit tristate buffer for signal <o_VGA_red0> created at line 89
+    Found 1-bit tristate buffer for signal <o_VGA_red1> created at line 90
+    Found 1-bit tristate buffer for signal <o_VGA_vsync> created at line 91
+    Found 1-bit tristate buffer for signal <o_VGA_hsync> created at line 92
+    Found 1-bit tristate buffer for signal <o_Eth_RST> created at line 94
+    Found 1-bit tristate buffer for signal <o_Eth_CS> created at line 96
+    Found 1-bit tristate buffer for signal <o_Eth_RD> created at line 97
+    Found 1-bit tristate buffer for signal <o_Eth_WR> created at line 98
+    Found 1-bit tristate buffer for signal <o_USB_SLOE> created at line 99
+    Found 1-bit tristate buffer for signal <o_USB_SLRD> created at line 101
+    Found 1-bit tristate buffer for signal <o_USB_SLWR> created at line 102
+    Found 1-bit tristate buffer for signal <o_TXD1> created at line 106
+    Found 1-bit tristate buffer for signal <o_TXD2> created at line 107
+    Found 1-bit tristate buffer for signal <o_LCDData> created at line 110
+    Found 1-bit tristate buffer for signal <o_LCDLatch> created at line 111
+    Summary:
+	inferred  22 Tristate(s).
+Unit <TopModule> synthesized.
+
+Synthesizing Unit <ClockGenerator>.
+    Related source file is "c:/Users/tahae/Desktop/FPGA/ipcore_dir/ClockGenerator.v".
+    Summary:
+	no macro.
+Unit <ClockGenerator> synthesized.
+
+Synthesizing Unit <Key_Driver>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/Key_Driver.v".
+    Summary:
+	no macro.
+Unit <Key_Driver> synthesized.
+
+Synthesizing Unit <SIPO>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/SIPO.v".
+    Found 1-bit register for signal <out<19>>.
+    Found 1-bit register for signal <out<18>>.
+    Found 1-bit register for signal <out<17>>.
+    Found 1-bit register for signal <out<16>>.
+    Found 1-bit register for signal <out<15>>.
+    Found 1-bit register for signal <out<14>>.
+    Found 1-bit register for signal <out<13>>.
+    Found 1-bit register for signal <out<12>>.
+    Found 1-bit register for signal <out<11>>.
+    Found 1-bit register for signal <out<10>>.
+    Found 1-bit register for signal <out<9>>.
+    Found 1-bit register for signal <out<8>>.
+    Found 1-bit register for signal <out<7>>.
+    Found 1-bit register for signal <out<6>>.
+    Found 1-bit register for signal <out<5>>.
+    Found 1-bit register for signal <out<4>>.
+    Found 1-bit register for signal <out<3>>.
+    Found 1-bit register for signal <out<2>>.
+    Found 1-bit register for signal <out<1>>.
+    Found 1-bit register for signal <out<0>>.
+    Found 5-bit register for signal <timer>.
+    Found 1-bit register for signal <out<20>>.
+    Found 5-bit adder for signal <timer[4]_GND_50_o_add_4_OUT> created at line 62.
+    Found 5-bit comparator greater for signal <PWR_7_o_timer[4]_LessThan_6_o> created at line 63
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <SIPO> synthesized.
+
+Synthesizing Unit <LED_Driver>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/LED_Driver.v".
+    Summary:
+	no macro.
+Unit <LED_Driver> synthesized.
+
+Synthesizing Unit <PISO>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/PISO.v".
+    Found 4-bit register for signal <timer>.
+    Found 1-bit register for signal <out>.
+    Found 4-bit adder for signal <timer[3]_GND_52_o_add_4_OUT> created at line 55.
+    Found 1-bit 16-to-1 multiplexer for signal <timer[3]_data[8]_Mux_3_o> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   5 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <PISO> synthesized.
+
+Synthesizing Unit <SevenSeg_Driver>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/SevenSeg_Driver.v".
+    Found 2-bit register for signal <timer>.
+    Found 2-bit adder for signal <timer[1]_GND_53_o_add_2_OUT> created at line 37.
+    Found 16-bit 4-to-1 multiplexer for signal <timer[1]_piso_out[3][15]_wide_mux_0_OUT> created at line 34.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <SevenSeg_Driver> synthesized.
+
+Synthesizing Unit <ToSeg>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/ToSeg.v".
+    Summary:
+	no macro.
+Unit <ToSeg> synthesized.
+
+Synthesizing Unit <ToBCD>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/toBCD.v".
+    Found 4-bit adder for signal <n0151> created at line 50.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_8_OUT> created at line 50.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_11_OUT> created at line 50.
+    Found 4-bit adder for signal <n0161> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_17_OUT> created at line 50.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_20_OUT> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_23_OUT> created at line 50.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_26_OUT> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_29_OUT> created at line 50.
+    Found 4-bit adder for signal <n0180> created at line 46.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_35_OUT> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_38_OUT> created at line 50.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_41_OUT> created at line 46.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_44_OUT> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_47_OUT> created at line 50.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_50_OUT> created at line 46.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_53_OUT> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_56_OUT> created at line 50.
+    Found 4-bit adder for signal <n0208> created at line 44.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_62_OUT> created at line 46.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_65_OUT> created at line 48.
+    Found 4-bit adder for signal <GND_55_o_GND_55_o_add_68_OUT> created at line 50.
+    Found 3-bit comparator lessequal for signal <n0004> created at line 49
+    Found 4-bit comparator lessequal for signal <n0008> created at line 49
+    Found 4-bit comparator lessequal for signal <n0012> created at line 49
+    Found 3-bit comparator lessequal for signal <n0016> created at line 47
+    Found 4-bit comparator lessequal for signal <n0020> created at line 49
+    Found 4-bit comparator lessequal for signal <n0024> created at line 47
+    Found 4-bit comparator lessequal for signal <n0028> created at line 49
+    Found 4-bit comparator lessequal for signal <n0032> created at line 47
+    Found 4-bit comparator lessequal for signal <n0036> created at line 49
+    Found 3-bit comparator lessequal for signal <n0040> created at line 45
+    Found 4-bit comparator lessequal for signal <n0044> created at line 47
+    Found 4-bit comparator lessequal for signal <n0048> created at line 49
+    Found 4-bit comparator lessequal for signal <n0052> created at line 45
+    Found 4-bit comparator lessequal for signal <n0056> created at line 47
+    Found 4-bit comparator lessequal for signal <n0060> created at line 49
+    Found 4-bit comparator lessequal for signal <n0064> created at line 45
+    Found 4-bit comparator lessequal for signal <n0068> created at line 47
+    Found 4-bit comparator lessequal for signal <n0072> created at line 49
+    Found 3-bit comparator lessequal for signal <n0076> created at line 43
+    Found 4-bit comparator lessequal for signal <n0080> created at line 45
+    Found 4-bit comparator lessequal for signal <n0084> created at line 47
+    Found 4-bit comparator lessequal for signal <n0088> created at line 49
+    Summary:
+	inferred  22 Adder/Subtractor(s).
+	inferred  22 Comparator(s).
+	inferred  22 Multiplexer(s).
+Unit <ToBCD> synthesized.
+
+Synthesizing Unit <BCDto7Seg>.
+    Related source file is "C:/Users/tahae/Desktop/FPGA/BCDto7Seg.v".
+    Found 16x8-bit Read Only RAM for signal <out>
+    Summary:
+	inferred   1 RAM(s).
+Unit <BCDto7Seg> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x8-bit single-port Read Only RAM                    : 4
+# Adders/Subtractors                                   : 26
+ 2-bit adder                                           : 1
+ 4-bit adder                                           : 24
+ 5-bit adder                                           : 1
+# Registers                                            : 27
+ 1-bit register                                        : 23
+ 2-bit register                                        : 1
+ 4-bit register                                        : 2
+ 5-bit register                                        : 1
+# Comparators                                          : 23
+ 3-bit comparator lessequal                            : 4
+ 4-bit comparator lessequal                            : 18
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 25
+ 1-bit 16-to-1 multiplexer                             : 2
+ 16-bit 4-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 22
+# Tristates                                            : 22
+ 1-bit tristate buffer                                 : 22
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <BCDto7Seg>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_out> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <in>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <out>           |          |
+    -----------------------------------------------------------------------
+Unit <BCDto7Seg> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PISO>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+Unit <PISO> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SIPO>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+Unit <SIPO> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SevenSeg_Driver>.
+The following registers are absorbed into counter <timer>: 1 register on signal <timer>.
+Unit <SevenSeg_Driver> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 16x8-bit single-port distributed Read Only RAM        : 4
+# Adders/Subtractors                                   : 23
+ 4-bit adder                                           : 22
+ 5-bit adder                                           : 1
+# Counters                                             : 4
+ 2-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+# Comparators                                          : 23
+ 3-bit comparator lessequal                            : 4
+ 4-bit comparator lessequal                            : 18
+ 5-bit comparator greater                              : 1
+# Multiplexers                                         : 25
+ 1-bit 16-to-1 multiplexer                             : 2
+ 16-bit 4-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 22
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2146 - In block <TopModule>, Counter <led_driver/piso/timer> <sevenseg_driver/piso/timer> are equivalent, XST will keep only <led_driver/piso/timer>.
+INFO:Xst:1901 - Instance clkgen/pll_base_inst in unit clkgen/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <TopModule> ...
+
+Optimizing unit <SIPO> ...
+
+Optimizing unit <ToBCD> ...
+WARNING:Xst:2677 - Node <key_driver/sipo/out_20> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <key_driver/sipo/out_16> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <key_driver/sipo/out_18> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <key_driver/sipo/out_19> of sequential type is unconnected in block <TopModule>.
+WARNING:Xst:2677 - Node <key_driver/sipo/out_17> of sequential type is unconnected in block <TopModule>.
+INFO:Xst:2261 - The FF/Latch <led_driver/piso/timer_0> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <key_driver/sipo/timer_0> 
+INFO:Xst:2261 - The FF/Latch <led_driver/piso/timer_1> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <key_driver/sipo/timer_1> 
+INFO:Xst:2261 - The FF/Latch <led_driver/piso/timer_2> in Unit <TopModule> is equivalent to the following FF/Latch, which will be removed : <key_driver/sipo/timer_2> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 0) on block TopModule, actual ratio is 2.
+FlipFlop key_driver/sipo/out_8 has been replicated 1 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop key_driver/sipo/out_8 connected to a primary input has been replicated
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)           | Load  |
+-----------------------------------+---------------------------------+-------+
+clkgen/pll_base_inst/CLKOUT0       | BUFG                            | 25    |
+o_LEDLatch_OBUF(o_LEDLatch1:O)     | NONE(*)(sevenseg_driver/timer_0)| 2     |
+-----------------------------------+---------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 10.236ns (Maximum Frequency: 97.696MHz)
+   Minimum input arrival time before clock: 2.351ns
+   Maximum output required time after clock: 5.436ns
+   Maximum combinational path delay: No path found
+
+=========================================================================

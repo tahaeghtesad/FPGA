@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="8">
+	<Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc6slx9tqg144-3" LaunchPart="xc6slx9tqg144-3" ConstrsSet="constrs_1" Description="PlanAhead Defaults (XST defaults with hierarchy)" State="current" Dir="$PRUNDIR/synth_1" LaunchTime="1458574547">
+		<File Type="XST-NGC" Name="TopModule.ngc"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/synth_1/synth_1.psg"/>
+		<File Type="XST-SRP" Name="TopModule.srp"/>
+		<File Type="PA-XST" Name="TopModule.xst"/>
+		<File Type="RUN-SRCS" Name="$PDATADIR/runs/synth_1/sources.xml"/>
+		<File Type="PA-XSTPRJ" Name="TopModule.prj"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/synth_1/constrs_in.xml"/>
+	</Run>
+	<Run Id="impl_1" Type="Ft2:EntireDesign" SynthRun="synth_1" Part="xc6slx9tqg144-3" LaunchPart="xc6slx9tqg144-3" ConstrsSet="constrs_1" Description="ISE Defaults, including packing registers in IOs off" State="current" Dir="$PRUNDIR/impl_1" LaunchTime="1458574574">
+		<File Type="MAP-PSR" Name="TopModule.psr"/>
+		<File Type="PA-EDIF" Name="TopModule.edf"/>
+		<File Type="PAR-NCD" Name="TopModule_routed.ncd"/>
+		<File Type="PA-UCF" Name="TopModule.ucf"/>
+		<File Type="PAR-PAD" Name="TopModule_routed_pad.txt"/>
+		<File Type="PAR-PAR" Name="TopModule_routed.par"/>
+		<File Type="PAR-UNR" Name="TopModule_routed.unroutes"/>
+		<File Type="BG-BIT" Name="TopModule.bit"/>
+		<File Type="BG-DRC" Name="TopModule.drc"/>
+		<File Type="PA-CONSTRSDIR" Name=".constrs"/>
+		<File Type="BG-BGN" Name="TopModule.bgn"/>
+		<File Type="TRCE-TWR" Name="TopModule.twr"/>
+		<File Type="TRCE-TWX" Name="TopModule.twx"/>
+		<File Type="XDL-XDL" Name="TopModule_routed.xdl"/>
+		<File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+		<File Type="WBT-LOG" Name="webtalk.log"/>
+		<File Type="RUN-CONSTRS" Name="$PDATADIR/runs/impl_1/constrs_in.xml"/>
+		<File Type="RUN-STRAT" Name="$PDATADIR/runs/impl_1/impl_1.psg"/>
+		<File Type="NGDB-NGD" Name="TopModule.ngd"/>
+		<File Type="NGDB-BLD" Name="TopModule.bld"/>
+		<File Type="MAP-NCD" Name="TopModule.ncd"/>
+		<File Type="MAP-PCF" Name="TopModule.pcf"/>
+		<File Type="MAP-MRP" Name="TopModule.mrp"/>
+		<File Type="MAP-MAP" Name="TopModule.map"/>
+	</Run>
+</Runs>
+

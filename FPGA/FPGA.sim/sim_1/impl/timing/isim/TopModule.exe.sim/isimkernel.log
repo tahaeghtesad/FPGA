@@ -1,0 +1,28 @@
+Command line:
+   TopModule.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  47437
+
+Mon Mar 21 20:09:08 2016
+
+
+ Elaboration Time: 0.265625 sec
+
+ Current Memory Usage: 876.978 Meg
+
+ Total Signals          : 3716
+ Total Nets             : 2193
+ Total Signal Drivers   : 2073
+ Total Blocks           : 561
+ Total Primitive Blocks : 359
+ Total Processes        : 2688
+ Total Traceable Variables  : 1822
+ Total Scalar Nets and Variables : 48811
+
+ Total Simulation Time: 0.671875 sec
+
+ Current Memory Usage: 1191.55 Meg
+
+Mon Mar 21 20:09:45 2016
+

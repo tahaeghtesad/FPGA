@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Sun Mar 06 23:10:21 2016
+# Process ID: 2220
+# Log file: C:/Users/tahae/Desktop/FPGA/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/tahae/Desktop/FPGA/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/tahae/Desktop/FPGA/pa.fromNcd.tcl
+# create_project -name FPGA -dir "C:/Users/tahae/Desktop/FPGA/planAhead_run_2" -part xc6slx9tqg144-3
+ERROR: [Common 17-53] User Exception: Project already exists on disk, please use '-force' option to overwrite: 
+     C:/Users/tahae/Desktop/FPGA/planAhead_run_2/FPGA.ppr
+     C:/Users/tahae/Desktop/FPGA/planAhead_run_2/FPGA.data
+
+    while executing
+"create_project -name FPGA -dir "C:/Users/tahae/Desktop/FPGA/planAhead_run_2" -part xc6slx9tqg144-3"
+    (file "C:/Users/tahae/Desktop/FPGA/pa.fromNcd.tcl" line 4)
+exit
+INFO: [Common 17-206] Exiting PlanAhead at Sun Mar 06 23:10:50 2016...
+INFO: [Common 17-83] Releasing license: PlanAhead

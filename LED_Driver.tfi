@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+LED_Driver instance_name (
+    .data(data), 
+    .clk(clk), 
+    .out(out), 
+    .latch(latch)
+    );
+
+

@@ -1,0 +1,10 @@
+[Inputs]
+clk
+=data[15:0]=
+[Outputs]
+out
+latch
+[BiDir]
+[ATTRIBUTES]
+VeriModel LED_Driver
+
