@@ -117,17 +117,18 @@ ClockGenerator clkgen(i_CLK,clk5, clk20, clk50, clk100);
 
 wire [15:0] dip_data;
 wire [4:0] push_data;
+wire [13:0] sevenseg_data;
+wire [15:0] led_data;
 
 assign o_PSCLK = ~clk5;
 
-wire [15:0] occurs;
-wire [12:0] occurs_count;
+Key_Driver key_driver(clk5, i_DIPData, dip_data, push_data, o_DIPLatch);
+LED_Driver led_driver(clk5, led_data, o_LEDData, o_LEDLatch);
+SevenSeg_Driver sevenseg_driver(clk5, sevenseg_data, o_SEGData, o_SEGLatch);
 
-OneOneOhOneDetector detector(clk5, i_DIPData, occurs, occurs_count, o_DIPLatch);
+wire [4:0] keys;
 
-//Key_Driver key_driver(clk5, i_DIPData, dip_data, push_data, o_DIPLatch);
-LED_Driver led_driver(clk5, occurs, o_LEDData, o_LEDLatch);
-SevenSeg_Driver sevenseg_driver(clk5, occurs_count, o_SEGData, o_SEGLatch);
+Debouncer db(clk, push_data, keys);
 
 
 endmodule
