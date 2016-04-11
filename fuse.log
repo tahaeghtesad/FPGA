@@ -1,40 +1,18 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/tahae/Desktop/FPGA/TopModule_isim_beh.exe" -prj "C:/Users/tahae/Desktop/FPGA/TopModule_beh.prj" "work.TopModule" "work.glbl" 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/tahae/Desktop/FPGA/Debouncer_tb_isim_beh.exe -prj C:/Users/tahae/Desktop/FPGA/Debouncer_tb_beh.prj work.Debouncer_tb work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/ipcore_dir/ClockGenerator.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/toBCD.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/BCDto7Seg.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/ToSeg.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/SIPO.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/PISO.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/SevenSeg_Driver.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/LED_Driver.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/Key_Driver.v" into library work
-Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/TopModule.v" into library work
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/Debouncer.v" into library work
+Analyzing Verilog file "C:/Users/tahae/Desktop/FPGA/Debouncer_tb.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "C:/Users/tahae/Desktop/FPGA/TopModule.v" Line 131: Size mismatch in connection of port <binary>. Formal port size is 13-bit while actual signal size is 16-bit.
 Completed static elaboration
-Compiling module IBUFG
-Compiling module PLL_ADV(BANDWIDTH="OPTIMIZED",CL...
-Compiling module PLL_BASE(CLKFBOUT_MULT=8,CLKIN_P...
-Compiling module BUFG
-Compiling module ClockGenerator
-Compiling module SIPO
-Compiling module Key_Driver
-Compiling module PISO
-Compiling module LED_Driver
-Compiling module ToBCD
-Compiling module BCDto7Seg
-Compiling module ToSeg
-Compiling module SevenSeg_Driver
-Compiling module TopModule
+Compiling module KeyDebouncer
+Compiling module Debouncer_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 5 sub-compilation(s) to finish...
-Compiled 15 Verilog Units
-Built simulation executable C:/Users/tahae/Desktop/FPGA/TopModule_isim_beh.exe
-Fuse Memory Usage: 41848 KB
-Fuse CPU Usage: 671 ms
+Compiled 3 Verilog Units
+Built simulation executable C:/Users/tahae/Desktop/FPGA/Debouncer_tb_isim_beh.exe
+Fuse Memory Usage: 26704 KB
+Fuse CPU Usage: 343 ms

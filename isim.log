@@ -1,39 +1,12 @@
 ISim log file
-Running: C:\Users\tahae\Desktop\FPGA\TopModule_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/tahae/Desktop/FPGA/TopModule_isim_beh.wdb 
+Running: C:\Users\tahae\Desktop\FPGA\Debouncer_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/tahae/Desktop/FPGA/Debouncer_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 This is a Full version of ISim.
-WARNING: File "C:/Users/tahae/Desktop/FPGA/TopModule.v" Line 118.  For instance TopModule/sevenseg_driver/, width 13 of formal port binary is not equal to width 16 of actual signal dip_data.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+                   0 << Starting the Simulation >> 
 Finished circuit initialization process.
-# show driver /TopModule/i_CLK
-/TopModule/i_CLK has no drivers.
-# show driver /TopModule/o_LEDLatch
-Driver for /TopModule/o_LEDLatch
-	St0	: /TopModule/led_driver/piso/Cont_31_0
-		  in File "C:/Users/tahae/Desktop/FPGA/PISO.v" Line 31
-
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-# isim force add /TopModule/o_LEDLatch 0 -radix bin -value 1 -radix bin -time 10 ps -repeat 20 ps
-ISim P.20131013 (signature 0x7708f090)
-This is a Full version of ISim.
-WARNING: File "C:/Users/tahae/Desktop/FPGA/TopModule.v" Line 118.  For instance TopModule/sevenseg_driver/, width 13 of formal port binary is not equal to width 16 of actual signal dip_data.
-# run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# isim force add /TopModule/i_CLK 0 -radix bin -value 1 -radix bin -time 2500 fs -repeat 5 ps
-# restart
+# run 1s

@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/tahae/Desktop/FPGA/TopModule_isim_beh.exe" -prj "C:/Users/tahae/Desktop/FPGA/TopModule_beh.prj" "work.TopModule" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/tahae/Desktop/FPGA/Debouncer_tb_isim_beh.exe" -prj "C:/Users/tahae/Desktop/FPGA/Debouncer_tb_beh.prj" "work.Debouncer_tb" "work.glbl" 
