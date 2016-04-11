@@ -129,6 +129,6 @@ SevenSeg_Driver sevenseg_driver(clk5, sevenseg_data, o_SEGData, o_SEGLatch);
 wire [4:0] keys;
 
 Debouncer db(clk, push_data, keys);
-
+Processor p(clk,dip_data,keys,led_data,sevenseg_data);
 
 endmodule

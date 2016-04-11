@@ -31,11 +31,11 @@ module Processor(clk, dip, key, led, sevenseg
 	 wire[15:0] data;
 	 
 	 InstructionMemory im(
-		.ADDRA(eom),
-		.DINA(dip),
-		.WEA(we),
-		.CLKA(clk),
-		.DOUTA(data)
+		.addra(eom),
+		.dina(dip),
+		.wea(we),
+		.clka(clk),
+		.douta(data)
 		);
 	
 endmodule
