@@ -39,21 +39,18 @@ module  KeyDebouncer(clk, in, out);
 	input in;
 	output reg out;
 	
-	reg [18:0] counter = 0;
-	reg current = 0;
+	reg [19:0] counter = 0;
 	
-	parameter length = 500000;
+	parameter length = 500;
 	
-	always @(posedge clk) begin
-		if (in == current)
+	always @(negedge clk) begin
+		if (out == in)
 			counter = 0;
 		else
 			counter = counter + 1;
 			
-		if (counter > length) begin
+		if (counter >= length) begin
 			out = in;
-			current = in;
-			counter = length;
 		end
 	end
 	

@@ -117,7 +117,7 @@ ClockGenerator clkgen(i_CLK,clk5, clk20, clk50, clk100);
 
 wire [15:0] dip_data;
 wire [4:0] push_data;
-wire [13:0] sevenseg_data;
+wire [12:0] sevenseg_data;
 wire [15:0] led_data;
 
 assign o_PSCLK = ~clk5;
@@ -128,7 +128,7 @@ SevenSeg_Driver sevenseg_driver(clk5, sevenseg_data, o_SEGData, o_SEGLatch);
 
 wire [4:0] keys;
 
-Debouncer db(clk, push_data, keys);
-Processor p(clk,dip_data,keys,led_data,sevenseg_data);
+Debouncer db(clk5, push_data, keys);
+Processor p(clk5,dip_data,keys,led_data,sevenseg_data);
 
 endmodule
