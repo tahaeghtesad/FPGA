@@ -40,6 +40,7 @@ module  KeyDebouncer(clk, in, out);
 	output reg out;
 	
 	reg [19:0] counter = 0;
+	
 	parameter length = 500000;
 	
 	always @(posedge clk) begin

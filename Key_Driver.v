@@ -27,7 +27,9 @@ module Key_Driver(clk, in, dip, push, latch
 	 output [4:0] push;
 	 output latch;
 	 
+	 wire [5:0] push_temp;
+	 assign push = ~push_temp;
 	 
-	 SIPO sipo(clk, {push,dip}, in, latch);
+	 SIPO sipo(clk, {push_temp,dip}, in, latch);
 
 endmodule
