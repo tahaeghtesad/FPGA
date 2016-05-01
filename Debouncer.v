@@ -41,7 +41,7 @@ module  KeyDebouncer(clk, in, out);
 	
 	reg [19:0] counter = 0;
 	
-	parameter length = 500000;
+	parameter length = 40000;
 	
 	always @(posedge clk) begin
 		if (out == 1)
@@ -49,9 +49,13 @@ module  KeyDebouncer(clk, in, out);
 		else begin
 			if (in == 1) begin
 				counter = counter + 1;
-				if (counter > length)
-					out = 1;
-			end
+				if (length <= counter) begin
+					if (counter < length + 1)
+						out = 1;
+					else
+						counter = length + 1;
+					end
+				end
 			else
 				counter = 0;
 		end
