@@ -23,54 +23,96 @@ module Processor(clk, dip, key, led, sevenseg
 	 input clk;
 	 input [15:0]dip;
 	 input [4:0]key;
-	 output [15:0]led;
-	 output [12:0]sevenseg;
+	 output reg [15:0]led = 0;
+	 output reg [12:0]sevenseg = 0;
 	 
 	 reg [7:0] eom = 0, pc = 0 ;
 	 reg [15:0] ir = 0;
 	 wire [7:0] imaddr;
-	 wire we;
-	 wire[15:0] data;
-	 
-	 
-	 assign imaddr = key[0] ? eom : pc;
-	 assign we = key[0] ? 1 : 0;
-	 
+	 wire[15:0] IM_Data;
+	 	 
+	 wire [15:0]ledData;
+	 wire [12:0]segData;	
+	 wire [7:0]newPc;
+	 reg running=0;
+	
 	 InstructionMemory im(
 		.addra(imaddr),
 		.dina(dip),
-		.wea(we),
+		.wea(key[0]),
 		.clka(~clk),
-		.douta(data)
+		.douta(IM_Data)
 		);
-	
-	
-	assign sevenseg = key[4] ? {5'd0,pc} : {5'd0,eom};
-	//assign sevenseg = {5'd0,eom};
-	assign led = data;
-	
-	/*always @(negedge key[0] , posedge key[2])
-	begin
-		if(~key[2])
-			eom = eom + 1;
-		else if (key[2])
-			eom = 0;
-	end		
-		always @(negedge key[1] , posedge key[3])
-	begin
-		if(~key[3])
-			pc = pc + 1;
-		else if (key[3])
-			pc = 0;
-	end*/
-	always @(posedge key[0] , posedge key[1] , posedge key[2] , posedge key[3] ) begin
+		
+	  wire [7:0] DM_Out; 	
+	  wire DM_WE;
+		DataMemory dm(
+		.addra(ir[7:0]),
+		.dina(alu_out),
+		.wea(DM_WE),
+		.clka(~clk),
+		.douta(DM_Out)
+		);
+		
+	 wire RBData1_SL , RB_WE , IMAdd_SL , Seg_WE , Led_WE , branch;
+	 wire [1:0]RBDataIn_SL , ALUData_SL , Seg_SL , LED_SL;
+	 wire [13:0] ALU_OP;	
+	 ControlUnit CU(ir , IMAdd_SL  , RBData1_SL , RBDataIn_SL , RB_WE , ALUData_SL , ALU_OP , DM_WE , Seg_SL , Seg_WE , LED_SL , Led_WE , branch);
+	 wire [7:0] rb_datain , rb_out1 , rb_out2;
+	 wire [2:0] rb_Addr1;
+	 RegisterBank rb(clk , rb_Addr1 , ir[2:0] , rb_datain , re , rb_out1 , rb_out2);
+	 wire[7:0]  Alu_in2;
+	 wire[3:0] flags;
+	 wire[7:0] Alu_out;	 
+	 ALU Alu(rb_out1, Alu_in2 , ALU_OP, Alu_out , flags);
+  	 wire taken;
+	 JCController JC(flags , ir[14:11] , taken);
+		
+	 
+	assign newPc = (branch & taken) ? ir[7:0] : pc+1; 
+	//assign newPc = pc + 1;
+	assign imaddr = key[0] ? eom : (IMAdd_SL ? ir[7:0] : pc);
+	assign rb_Addr1 = RBData1_SL ? ir[11:9] : ir[5:3];
+	assign rb_datain = RBDataIn_SL[1] ? (RBDataIn_SL[0] ? rb_out2 : alu_out ) : (RBDataIn_SL[0] ? DM_Out: ir[7:0]);
+	assign Alu_in2 = ALUData_SL[1] ? (ALUData_SL[0] ? ir[7:0] : 1 ) : (ALUData_SL[0] ? {5'd0,ir[2:0]} : rb_out2);
+	assign segData = Seg_SL[1] ? IM_Data[12:0] : (Seg_SL[0] ? {5'd0 , DM_Out} : {5'd0 ,rb_out1});
+	assign ledData = LED_SL[1] ? IM_Data : (LED_SL[0] ? {8'd0 , DM_Out} : {8'd0 ,rb_out1});
+
+	always @(posedge clk ) begin
+		if (running)
+			pc = newPc;
+		else if (pc >= eom)
+			running = 0;
+		else if (key[1])
+			running = 1;
+		if (key[2])
+			pc = newPc;
 		if (key[0])
 			eom = eom + 1;
-		if (key[1])
-			pc = pc + 1;
-		if (key[2])
-			eom = 0;
-		if (key[3])
+		if (key[3]) begin
 			pc = 0;
+			eom = 0;
+			running = 0;
+		end
 	end
+	
+	wire  not_key_0;
+	assign not_key_0 = ~key[0];
+
+always@(posedge clk)
+begin
+	//if(Seg_WE)
+	//	sevenseg = segData;
+	if (Led_WE)
+		led = ledData;
+end
+//	always @(Seg_WE)
+//		sevenseg = segData;
+//	always @(Led_WE)
+//		led = ledData;
+	always @(not_key_0)
+		ir = IM_Data;
+		
+always sevenseg = pc;
+
 endmodule
