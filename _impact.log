@@ -1,9 +1,11 @@
 iMPACT Version: 14.7
 
-iMPACT log file Started on Mon May 16 12:53:21 2016
+iMPACT log file Started on Mon May 16 16:20:17 2016
 
 Welcome to iMPACT
 iMPACT Version: 14.7
+Project: 'C:\Users\tahae\Desktop\FPGA\\auto_project.ipf' already exists.
+Original project has been renamed to'C:\Users\tahae\Desktop\FPGA\\auto_project_1.ipf'.
 Project: C:\Users\tahae\Desktop\FPGA\\auto_project.ipf created.
 // *** BATCH CMD : setMode -bs
 GUI --- Auto connect to cable...
@@ -24,17 +26,19 @@ Type = 0x0605.
  Cable Type = 3, Revision = 0.
  Setting cable speed to 6 MHz.
 Cable connection established.
-Firmware version = 1100.
+Firmware version = 1027.
 File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusbdfwu.hex = 1100.
 Firmware hex file version = 1100.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusbdfwu.hex.
+Downloaded firmware version = 1100.
 PLD file version = 0012h.
  PLD version = 0012h.
 PROGRESS_END - End Operation.
-Elapsed time =      0 sec.
+Elapsed time =      1 sec.
 Type = 0x0605.
 ESN not available for this cable.
 Attempting to identify devices in the boundary-scan chain configuration...
-INFO:iMPACT - Current time: 5/16/2016 12:53:23 PM
+INFO:iMPACT - Current time: 5/16/2016 4:20:20 PM
 // *** BATCH CMD : Identify -inferir 
 PROGRESS_START - Starting Operation.
 Identifying chain contents...'0': : Manufacturer's ID = Xilinx xcf04s, Version : 13
@@ -61,7 +65,7 @@ Data width read from the bitstream file = 1.
 ----------------------------------------------------------------------
 INFO:iMPACT:501 - '1': Added Device xc6slx9 successfully.
 ----------------------------------------------------------------------
-INFO:iMPACT - Current time: 5/16/2016 12:53:36 PM
+INFO:iMPACT - Current time: 5/16/2016 4:20:36 PM
 // *** BATCH CMD : Program -p 1 
 Maximum TCK operating frequency for this device chain: 15000000.
 Validating chain...
@@ -98,52 +102,7 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-// *** BATCH CMD : assignFile -p 1 -file"C:/Users/tahae/Desktop/FPGA/topmodule.bit"
-'1': Loading file 'C:/Users/tahae/Desktop/FPGA/topmodule.bit' ...
-done.
-UserID read from the bitstream file = 0xFFFFFFFF.
-Data width read from the bitstream file = 1.
-----------------------------------------------------------------------
-INFO:iMPACT:501 - '1': Added Device xc6slx9 successfully.
-----------------------------------------------------------------------
-INFO:iMPACT - Current time: 5/16/2016 12:57:42 PM
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 15000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-'1': Programming device...
-PROGRESS_START - Starting Operation.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-done.
-'1': Reading status register contents...
-[0] CRC ERROR                                                              :        0
-[1] IDCODE ERROR                                                           :        0
-[2] DCM LOCK STATUS                                                        :        1
-[3] GTS_CFG_B STATUS                                                       :        1
-[4] GWE STATUS                                                             :        1
-[5] GHIGH STATUS                                                           :        1
-[6] DECRYPTION ERROR                                                       :        0
-[7] DECRYPTOR ENABLE                                                       :        0
-[8] HSWAPEN PIN                                                            :        1
-[9] MODE PIN M[0]                                                          :        1
-[10] MODE PIN M[1]                                                         :        1
-[11] RESERVED                                                              :        0
-[12] INIT_B PIN                                                            :        1
-[13] DONE PIN                                                              :        1
-[14] SUSPEND STATUS                                                        :        0
-[15] FALLBACK STATUS                                                       :        0
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1100 1110 1100 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =      0 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:02:55 PM
+INFO:iMPACT - Current time: 5/16/2016 4:24:40 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -183,7 +142,7 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      0 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:10:27 PM
+INFO:iMPACT - Current time: 5/16/2016 4:29:51 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -223,7 +182,367 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:10:33 PM
+INFO:iMPACT - Current time: 5/16/2016 4:54:23 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 4:56:19 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:01:43 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:04:31 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:08:49 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:17:42 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:20:39 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:36:14 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:43:16 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:49:05 PM
 // *** BATCH CMD : Program -p 1 
 Maximum TCK operating frequency for this device chain: 15000000.
 Validating chain...
@@ -260,7 +579,7 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      0 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:11:32 PM
+INFO:iMPACT - Current time: 5/16/2016 5:51:02 PM
 // *** BATCH CMD : Program -p 1 
 Maximum TCK operating frequency for this device chain: 15000000.
 Validating chain...
@@ -297,7 +616,7 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:11:44 PM
+INFO:iMPACT - Current time: 5/16/2016 5:51:13 PM
 // *** BATCH CMD : Program -p 1 
 Maximum TCK operating frequency for this device chain: 15000000.
 Validating chain...
@@ -334,7 +653,44 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:14:05 PM
+INFO:iMPACT - Current time: 5/16/2016 5:51:18 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 5:54:15 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -374,95 +730,7 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:20:48 PM
-Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
-INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
-   but the original bitstream file remains unchanged.
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 15000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-'1': Programming device...
-PROGRESS_START - Starting Operation.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-done.
-'1': Reading status register contents...
-[0] CRC ERROR                                                              :        0
-[1] IDCODE ERROR                                                           :        0
-[2] DCM LOCK STATUS                                                        :        1
-[3] GTS_CFG_B STATUS                                                       :        1
-[4] GWE STATUS                                                             :        1
-[5] GHIGH STATUS                                                           :        1
-[6] DECRYPTION ERROR                                                       :        0
-[7] DECRYPTOR ENABLE                                                       :        0
-[8] HSWAPEN PIN                                                            :        1
-[9] MODE PIN M[0]                                                          :        1
-[10] MODE PIN M[1]                                                         :        1
-[11] RESERVED                                                              :        0
-[12] INIT_B PIN                                                            :        1
-[13] DONE PIN                                                              :        1
-[14] SUSPEND STATUS                                                        :        0
-[15] FALLBACK STATUS                                                       :        0
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1100 1110 1100 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:24:13 PM
-Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
-INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
-   but the original bitstream file remains unchanged.
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 15000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-'1': Programming device...
-PROGRESS_START - Starting Operation.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-done.
-'1': Reading status register contents...
-[0] CRC ERROR                                                              :        0
-[1] IDCODE ERROR                                                           :        0
-[2] DCM LOCK STATUS                                                        :        1
-[3] GTS_CFG_B STATUS                                                       :        1
-[4] GWE STATUS                                                             :        1
-[5] GHIGH STATUS                                                           :        1
-[6] DECRYPTION ERROR                                                       :        0
-[7] DECRYPTOR ENABLE                                                       :        0
-[8] HSWAPEN PIN                                                            :        1
-[9] MODE PIN M[0]                                                          :        1
-[10] MODE PIN M[1]                                                         :        1
-[11] RESERVED                                                              :        0
-[12] INIT_B PIN                                                            :        1
-[13] DONE PIN                                                              :        1
-[14] SUSPEND STATUS                                                        :        0
-[15] FALLBACK STATUS                                                       :        0
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1100 1110 1100 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =      1 sec.
-// *** BATCH CMD : assignFile -p 1 -file"C:/Users/tahae/Desktop/FPGA/topmodule.bit"
-'1': Loading file 'C:/Users/tahae/Desktop/FPGA/topmodule.bit' ...
-done.
-UserID read from the bitstream file = 0xFFFFFFFF.
-Data width read from the bitstream file = 1.
-----------------------------------------------------------------------
-INFO:iMPACT:501 - '1': Added Device xc6slx9 successfully.
-----------------------------------------------------------------------
-INFO:iMPACT - Current time: 5/16/2016 1:30:25 PM
+INFO:iMPACT - Current time: 5/16/2016 6:02:15 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -529,10 +797,318 @@ Downloaded firmware version = 1100.
 PLD file version = 0012h.
  PLD version = 0012h.
 PROGRESS_END - End Operation.
-Elapsed time =      0 sec.
+Elapsed time =      1 sec.
 Type = 0x0605.
 ESN not available for this cable.
-INFO:iMPACT - Current time: 5/16/2016 1:42:29 PM
+INFO:iMPACT - Current time: 5/16/2016 6:10:38 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:11:51 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:12:51 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:24:27 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:24:29 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:24:35 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:24:43 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:26:21 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:35:00 PM
+Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
+INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
+   but the original bitstream file remains unchanged.
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:50:56 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -572,7 +1148,127 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      0 sec.
-INFO:iMPACT - Current time: 5/16/2016 1:58:17 PM
+Cable is not connected.
+GUI --- Auto connect to cable...
+// *** BATCH CMD : setCable -port auto
+INFO:iMPACT - Digilent Plugin: Plugin Version: 2.4.4
+INFO:iMPACT - Digilent Plugin: no JTAG device was found.
+AutoDetecting cable. Please wait.
+*** WARNING ***: When port is set to auto detect mode, cable speed is set todefault 6 MHz regardless of explicit arguments supplied for setting the baudrates
+PROGRESS_START - Starting Operation.
+Connecting to cable (Usb Port - USB21).
+Checking cable driver.
+ Driver file xusbdfwu.sys found.
+ Driver version: src=1027, dest=1027.
+ Driver windrvr6.sys version = 10.2.1.0. WinDriver v10.21 Jungo (c) 1997 - 2010 Build Date: Aug 31 2010 x86_64 64bit SYS14:14:44, version = 1021.
+ Cable PID = 0008.
+ Max current requested during enumeration is 280 mA.
+Type = 0x0605.
+ Cable Type = 3, Revision = 0.
+ Setting cable speed to 6 MHz.
+Cable connection established.
+Firmware version = 1027.
+File version of C:/Xilinx/14.7/ISE_DS/ISE/data/xusbdfwu.hex = 1100.
+Firmware hex file version = 1100.
+Downloading C:/Xilinx/14.7/ISE_DS/ISE/data/xusbdfwu.hex.
+Downloaded firmware version = 1100.
+PLD file version = 0012h.
+ PLD version = 0012h.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+Type = 0x0605.
+ESN not available for this cable.
+INFO:iMPACT - Current time: 5/16/2016 6:57:38 PM
+// *** BATCH CMD : Program -p 1 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00001111111111111111111111111111
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00000100000000000001000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:57:39 PM
+// *** BATCH CMD : Program -p 1 
+INFO:iMPACT:583 - '1': The idcode read from the device does not match the idcode   in the bsdl File.
+INFO:iMPACT:1578 - '1':  Device IDCODE :        00001111111111111111111111111111
+INFO:iMPACT:1579 - '1': Expected IDCODE:    00000100000000000001000010010011
+PROGRESS_START - Starting Operation.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 5/16/2016 6:57:43 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      0 sec.
+INFO:iMPACT - Current time: 5/16/2016 7:01:17 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 7:08:43 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -612,7 +1308,44 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 2:02:25 PM
+INFO:iMPACT - Current time: 5/16/2016 7:13:11 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 7:14:22 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -652,7 +1385,81 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 2:04:29 PM
+INFO:iMPACT - Current time: 5/16/2016 7:17:45 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 7:19:45 PM
+// *** BATCH CMD : Program -p 1 
+Maximum TCK operating frequency for this device chain: 15000000.
+Validating chain...
+Boundary-scan chain validated successfully.
+'1': Programming device...
+PROGRESS_START - Starting Operation.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+done.
+'1': Reading status register contents...
+[0] CRC ERROR                                                              :        0
+[1] IDCODE ERROR                                                           :        0
+[2] DCM LOCK STATUS                                                        :        1
+[3] GTS_CFG_B STATUS                                                       :        1
+[4] GWE STATUS                                                             :        1
+[5] GHIGH STATUS                                                           :        1
+[6] DECRYPTION ERROR                                                       :        0
+[7] DECRYPTOR ENABLE                                                       :        0
+[8] HSWAPEN PIN                                                            :        1
+[9] MODE PIN M[0]                                                          :        1
+[10] MODE PIN M[1]                                                         :        1
+[11] RESERVED                                                              :        0
+[12] INIT_B PIN                                                            :        1
+[13] DONE PIN                                                              :        1
+[14] SUSPEND STATUS                                                        :        0
+[15] FALLBACK STATUS                                                       :        0
+INFO:iMPACT:2219 - Status register values:
+INFO:iMPACT - 0011 1100 1110 1100 
+INFO:iMPACT:579 - '1': Completed downloading bit file to device.
+INFO:iMPACT:188 - '1': Programming completed successfully.
+ LCK_cycle = NoWait.
+LCK cycle: NoWait
+INFO:iMPACT - '1': Checking done pin....done.
+'1': Programmed successfully.
+PROGRESS_END - End Operation.
+Elapsed time =      1 sec.
+INFO:iMPACT - Current time: 5/16/2016 7:21:45 PM
 Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
 INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
    but the original bitstream file remains unchanged.
@@ -692,50 +1499,7 @@ INFO:iMPACT - '1': Checking done pin....done.
 '1': Programmed successfully.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 2:07:09 PM
-Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
-INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
-   but the original bitstream file remains unchanged.
-// *** BATCH CMD : Program -p 1 
-Maximum TCK operating frequency for this device chain: 15000000.
-Validating chain...
-Boundary-scan chain validated successfully.
-'1': Programming device...
-PROGRESS_START - Starting Operation.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-done.
-'1': Reading status register contents...
-[0] CRC ERROR                                                              :        0
-[1] IDCODE ERROR                                                           :        0
-[2] DCM LOCK STATUS                                                        :        1
-[3] GTS_CFG_B STATUS                                                       :        1
-[4] GWE STATUS                                                             :        1
-[5] GHIGH STATUS                                                           :        1
-[6] DECRYPTION ERROR                                                       :        0
-[7] DECRYPTOR ENABLE                                                       :        0
-[8] HSWAPEN PIN                                                            :        1
-[9] MODE PIN M[0]                                                          :        1
-[10] MODE PIN M[1]                                                         :        1
-[11] RESERVED                                                              :        0
-[12] INIT_B PIN                                                            :        1
-[13] DONE PIN                                                              :        1
-[14] SUSPEND STATUS                                                        :        0
-[15] FALLBACK STATUS                                                       :        0
-INFO:iMPACT:2219 - Status register values:
-INFO:iMPACT - 0011 1100 1110 1100 
-INFO:iMPACT:579 - '1': Completed downloading bit file to device.
-INFO:iMPACT:188 - '1': Programming completed successfully.
- LCK_cycle = NoWait.
-LCK cycle: NoWait
-INFO:iMPACT - '1': Checking done pin....done.
-'1': Programmed successfully.
-PROGRESS_END - End Operation.
-Elapsed time =      1 sec.
-INFO:iMPACT - Current time: 5/16/2016 2:15:12 PM
-Updating config file C:/Users/tahae/Desktop/FPGA/topmodule.bit...
-INFO:iMPACT:2257 - Startup Clock has been changed to 'JtagClk' in the bitstream   stored in memory,
-   but the original bitstream file remains unchanged.
+INFO:iMPACT - Current time: 5/16/2016 7:22:25 PM
 // *** BATCH CMD : Program -p 1 
 Maximum TCK operating frequency for this device chain: 15000000.
 Validating chain...
@@ -773,3 +1537,29 @@ INFO:iMPACT - '1': Checking done pin....done.
 PROGRESS_END - End Operation.
 Elapsed time =      1 sec.
 Cable is not connected.
+Project: 'C:\Users\tahae\Desktop\FPGA\\auto_project.ipf' created.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : saveProjectFile -file"C:\Users\tahae\Desktop\FPGA\\auto_project.ipf"
+// *** BATCH CMD : setMode -bs
+INFO:iMPACT - Launching WebTalk, please refer to the webtalk log at   C:\Users\tahae\Desktop\FPGA\webtalk.log for details.
+INFO:iMPACT - Running wbtc successfully.
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : deleteDevice -position 1
+----------------------------------------------------------------------
+// *** BATCH CMD : deleteDevice -position 1
+// *** BATCH CMD : setMode -bs
+// *** BATCH CMD : setMode -ss
+// *** BATCH CMD : setMode -sm
+// *** BATCH CMD : setMode -hw140
+// *** BATCH CMD : setMode -spi
+// *** BATCH CMD : setMode -acecf
+// *** BATCH CMD : setMode -acempm
+// *** BATCH CMD : setMode -pff

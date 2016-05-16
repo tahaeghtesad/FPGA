@@ -56,14 +56,14 @@ module Processor(clk, dip, key, led, sevenseg
 		
 	 wire RBData1_SL , RB_WE , IMAdd_SL , Seg_WE , Led_WE , branch;
 	 wire [1:0]RBDataIn_SL , ALUData_SL , Seg_SL , LED_SL;
-	 wire [13:0] ALU_OP;	
+	 wire [3:0] ALU_OP;	
 	 ControlUnit CU(ir , IMAdd_SL  , RBData1_SL , RBDataIn_SL , RB_WE , ALUData_SL , ALU_OP , DM_WE , Seg_SL , Seg_WE , LED_SL , Led_WE , branch);
 	 wire [7:0] rb_datain , rb_out1 , rb_out2;
 	 wire [2:0] rb_Addr1;
 	 RegisterBank rb(clk , rb_Addr1 , ir[2:0] , rb_datain , RB_WE , rb_out1 , rb_out2);
 	 wire[7:0]  Alu_in2;
 	 wire[3:0] flags;
-	 wire[7:0] Alu_out;	 
+	 wire[7:0] Alu_out;	
 	 ALU Alu(rb_out1, Alu_in2 , ALU_OP, Alu_out , flags);
   	 wire taken;
 	 JCController JC(flags , ir[14:11] , taken);
@@ -72,7 +72,7 @@ module Processor(clk, dip, key, led, sevenseg
 	assign newPc = (branch & taken) ? ir[7:0] : pc+1; 
 	assign imaddr = key[0] ? eom : (IMAdd_SL ? ir[7:0] : pc);
 	assign rb_Addr1 = RBData1_SL ? ir[5:3]: ir[10:8];
-	assign rb_datain = RBDataIn_SL[1] ? (RBDataIn_SL[0] ? rb_out2 : alu_out ) : (RBDataIn_SL[0] ? DM_Out: ir[7:0]);
+	assign rb_datain = RBDataIn_SL[1] ? (RBDataIn_SL[0] ? rb_out2 : Alu_out ) : (RBDataIn_SL[0] ? DM_Out: ir[7:0]);
 	assign Alu_in2 = ALUData_SL[1] ? (ALUData_SL[0] ? ir[7:0] : 1 ) : (ALUData_SL[0] ? {5'd0,ir[2:0]} : rb_out2);
 	assign segData = Seg_SL[1] ? IM_Data[12:0] : (Seg_SL[0] ? {5'd0 , DM_Out} : {5'd0 ,rb_out1});
 	assign ledData = LED_SL[1] ? IM_Data : (LED_SL[0] ? {8'd0 , DM_Out} : {8'd0 ,rb_out1});
@@ -95,9 +95,10 @@ module Processor(clk, dip, key, led, sevenseg
 		end
 		if (~key[0])
 			ir = IM_Data;
-		//if (Led_WE)
-		//	led = ledData;
-		led = key[4] ? {1'd1, rb_Addr1 , ir[2:0] , rb_datain , RB_WE} : {1'b1, IMAdd_SL  , RBData1_SL , RBDataIn_SL , RB_WE , ALUData_SL , DM_WE , Seg_SL , Seg_WE , LED_SL , Led_WE , branch};
+		if (Led_WE)
+			led = ledData;
+		//led = key[4] ? {rb_Addr1 , ir[2:0], RB_WE, 1'b1} : {rb_datain, rb_out1};
+		//led = key[4] ? eom : pc;
 		if (Seg_WE)
 			sevenseg = segData;
 	end

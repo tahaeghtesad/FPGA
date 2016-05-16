@@ -23,7 +23,7 @@ module JCController(flags , type , taken
 	input [3:0] flags , type;
 	output reg taken;
 	
-	always@(flags)
+	always
 	begin
 		case(type)
 			0: taken = flags[2];
