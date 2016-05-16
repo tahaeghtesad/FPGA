@@ -29,7 +29,8 @@ module Debouncer(clk, in, out
 	 KeyDebouncer d1(clk,in[1],out[1]);
 	 KeyDebouncer d2(clk,in[2],out[2]);
 	 KeyDebouncer d3(clk,in[3],out[3]);
-	 KeyDebouncer d4(clk,in[4],out[4]);
+	 //KeyDebouncer d4(clk,in[4],out[4]);
+	 assign out[4] = in[4];
 
 endmodule
 
