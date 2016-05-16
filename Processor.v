@@ -60,7 +60,7 @@ module Processor(clk, dip, key, led, sevenseg
 	 ControlUnit CU(ir , IMAdd_SL  , RBData1_SL , RBDataIn_SL , RB_WE , ALUData_SL , ALU_OP , DM_WE , Seg_SL , Seg_WE , LED_SL , Led_WE , branch);
 	 wire [7:0] rb_datain , rb_out1 , rb_out2;
 	 wire [2:0] rb_Addr1;
-	 RegisterBank rb(clk , rb_Addr1 , ir[2:0] , rb_datain , re , rb_out1 , rb_out2);
+	 RegisterBank rb(clk , rb_Addr1 , ir[2:0] , rb_datain , RB_WE , rb_out1 , rb_out2);
 	 wire[7:0]  Alu_in2;
 	 wire[3:0] flags;
 	 wire[7:0] Alu_out;	 
@@ -70,19 +70,18 @@ module Processor(clk, dip, key, led, sevenseg
 		
 	 
 	assign newPc = (branch & taken) ? ir[7:0] : pc+1; 
-	//assign newPc = pc + 1;
 	assign imaddr = key[0] ? eom : (IMAdd_SL ? ir[7:0] : pc);
-	assign rb_Addr1 = RBData1_SL ? ir[11:9] : ir[5:3];
+	assign rb_Addr1 = RBData1_SL ? ir[5:3]: ir[10:8];
 	assign rb_datain = RBDataIn_SL[1] ? (RBDataIn_SL[0] ? rb_out2 : alu_out ) : (RBDataIn_SL[0] ? DM_Out: ir[7:0]);
 	assign Alu_in2 = ALUData_SL[1] ? (ALUData_SL[0] ? ir[7:0] : 1 ) : (ALUData_SL[0] ? {5'd0,ir[2:0]} : rb_out2);
 	assign segData = Seg_SL[1] ? IM_Data[12:0] : (Seg_SL[0] ? {5'd0 , DM_Out} : {5'd0 ,rb_out1});
 	assign ledData = LED_SL[1] ? IM_Data : (LED_SL[0] ? {8'd0 , DM_Out} : {8'd0 ,rb_out1});
 
 	always @(posedge clk ) begin
+		if (newPc >= eom)
+			running = 0;
 		if (running)
 			pc = newPc;
-		else if (pc >= eom)
-			running = 0;
 		else if (key[1])
 			running = 1;
 		if (key[2])
@@ -94,25 +93,13 @@ module Processor(clk, dip, key, led, sevenseg
 			eom = 0;
 			running = 0;
 		end
+		if (~key[0])
+			ir = IM_Data;
+		//if (Led_WE)
+		//	led = ledData;
+		led = key[4] ? {1'd1, rb_Addr1 , ir[2:0] , rb_datain , RB_WE} : {1'b1, IMAdd_SL  , RBData1_SL , RBDataIn_SL , RB_WE , ALUData_SL , DM_WE , Seg_SL , Seg_WE , LED_SL , Led_WE , branch};
+		if (Seg_WE)
+			sevenseg = segData;
 	end
-	
-	wire  not_key_0;
-	assign not_key_0 = ~key[0];
-
-always@(posedge clk)
-begin
-	//if(Seg_WE)
-	//	sevenseg = segData;
-	if (Led_WE)
-		led = ledData;
-end
-//	always @(Seg_WE)
-//		sevenseg = segData;
-//	always @(Led_WE)
-//		led = ledData;
-	always @(not_key_0)
-		ir = IM_Data;
-		
-always sevenseg = pc;
 
 endmodule

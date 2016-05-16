@@ -58,7 +58,7 @@ begin
 	end
 //		assign out = {RBData1_SL , RB_WE , Seg_WE , Led_WE , DM_WE , branch , IMAdd_SL, RBDataIn_SL , ALUData_SL , Seg_SL , LED_SL , ALU_OP};
 
-	if(in[15] == 1)
+	else if(in[15] == 1)
 	begin
 		case(in[14:11])
 			0:out = 19'd 0000010000000001111;
